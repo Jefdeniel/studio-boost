@@ -1,0 +1,14 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+   {% include "../_partials/_hero_big.njk" %}
+
+    <div class="content-wrapper">
+     {{content | safe}}
+     
+      {% include "../_partials/_quote.njk" %}
+
+     
+   </div>
+{% endblock main %}
+  

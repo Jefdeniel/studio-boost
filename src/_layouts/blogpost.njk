@@ -1,0 +1,35 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h1>{{ title }}</h1>
+        <p class="p--date">{{ date }}</p>
+      </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- text -->
+        {% block left %}
+           {% if image %}
+            <img src="/img/{{ image }}.png" class="img-fluid" /> 
+          {% endif %}
+        {% endblock left %}
+      </div>
+      <div class="col-md-6">
+        <!-- img -->
+        {% block right %}
+          {% if intro %}
+            <p class="p--intro">{{ intro }}</p>
+          {% endif %}
+        {% endblock right %}
+      </div>
+    </div>
+
+     <div class="content-wrapper">
+     {{content | safe}}
+     
+    {% include "../_partials/_quote.njk" %}
+
+   </div>
+{% endblock main %}

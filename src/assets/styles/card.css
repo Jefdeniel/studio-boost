@@ -1,0 +1,33 @@
+.card {
+  position: relative; /* toegevoegd voor het juist positioneren van content */
+  max-height: 75px;
+  margin: 4px;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio (Vierkant) */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+.card:hover {
+  /* aangepaste stijlen voor hover-effect */
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  align-items: left;
+  height: 100%;
+}
+
+.card__title {
+  background-color: var(--white);
+  color: var(--gray);
+  font-size: var(--text-sm);
+  width: fit-content;
+}

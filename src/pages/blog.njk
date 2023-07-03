@@ -1,0 +1,21 @@
+---
+title: Blog
+tags: nav_items
+layout: blog
+intro: Curabitur sed mollis sem. Proin nisi ex, viverra a magna ultricies, fringilla ullamcorper leo. Praesent fringilla augue sem, vitae tempor sapien cursus vel. Cras dolor orci, dapibus eget pulvinar et, feugiat ac dui. Sed mauris dui, viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta ac, dignissim id ligula.
+---
+
+<div class="container">
+  <div class="row mt-5">
+    <!-- Verwijs naar de projects variabele zonder gebruik te maken van collections -->
+    {% for item in collections.Blog %}
+      <div class="col-md-4">
+        <a href="{{ item.page.url }}" class="card" style="background-image: url('/img/blog/{{item.data.slug}}/cover.png')">
+          <div class="card__body">
+            <p class="card__title">{{ item.data.title | upper }} - {{ item.data.subject | upper }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

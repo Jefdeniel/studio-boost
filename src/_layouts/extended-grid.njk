@@ -1,0 +1,26 @@
+{% extends "./grid.njk" %}
+
+{% block extended %}
+
+    <div class=" col-md-6">
+      <!-- img -->
+      {% block extended_left %}
+          {% if image %}
+            <img src="/img/{{ image }}" class="img-fluid" /> 
+          {% endif %}
+      {% endblock extended_left %}
+    </div>
+
+    <div class=" col-md-6">
+      <!-- text -->
+      {% block extended_right %}
+        {% if intro %}
+          <p>{{ intro }}</p>
+        {% endif %}
+        {% if text %}
+          <p>{{ text }}</p>
+        {% endif %}
+      {% endblock extended_right %}
+    </div>
+  
+{% endblock extended %}

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row mt-5">
+    <!-- Verwijs naar de projects variabele zonder gebruik te maken van collections -->
+    {% for item in collections.projects %}
+      <div class="col-md-4">
+        <a href="{{ item.page.url }}" class="card" style="background-image: url('/img/projects/{{item.data.slug}}/bg.png')">
+          <div class="card__body">
+            <p class="card__title">{{ item.data.title | upper }} - {{ item.data.built | upper }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

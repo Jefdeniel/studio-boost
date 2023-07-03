@@ -1,0 +1,40 @@
+<!-- grid.njk -->
+
+{% extends "./base.njk" %}
+
+{% block main %}
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <!-- text -->
+        {% block left %}
+          <p></p> 
+        {% endblock left %}
+      </div>
+      <div class="col-md-6">
+        <!-- img -->
+        {% block right %}
+          {% if image %}
+            <img src="/img/{{ image }}" class="img-fluid" /> 
+          {% endif %}
+        {% endblock right %}
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+        <!-- extended -->
+        {% block extended %}
+          <p></p> 
+        {% endblock extended %}
+    </div>
+    
+    <div class="content-wrapper">
+      <div class="col-12">
+        <!-- bottom -->
+        {% block bottom %} 
+          <!-- Inhoud voor de bottom sectie -->
+        {% endblock bottom %}
+      </div>
+    </div>
+  </div>
+{% endblock main %}

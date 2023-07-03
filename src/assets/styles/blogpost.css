@@ -1,0 +1,12 @@
+.p--intro {
+  font-size: var(--text-sm);
+  line-height: var(--spacing-lg);
+  font-weight: var(--bolder);
+  font-family: var(--font-family_sitka-display);
+}
+
+.p--date {
+  color: var(--gray);
+  text-transform: uppercase;
+  opacity: 1;
+}

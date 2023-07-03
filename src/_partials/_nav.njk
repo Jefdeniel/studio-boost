@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <a class="navbar__logo" href="{{ '/' | url }}">Studio Boost</a>
+  <ul class="menu list-unstyled">
+    {% for nav_item in collections.nav_items %}
+    <li class="menu__item">
+      <a
+        class="menu__link"
+        href="{{ nav_item.page.url }}"
+        >{{ nav_item.data.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

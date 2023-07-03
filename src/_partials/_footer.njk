@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="columns">
+    <strong class="column__column footer__logo">Studio Boost</strong>
+      <ul class="menu menu--vertical list list-unstyled">
+        {% for nav_item in collections.nav_items %}
+        <li class="menu__item">
+          <a
+            class="menu__link {% if page.url == nav_item.page.url %} menu__link--active {% endif %}"
+            href="{{ nav_item.page.url }}"
+            >{{ nav_item.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+  </div>
+
+  <hr>
+
+  <div class columns>
+    <div class="column__column">
+    {# <p class="footer__text">© Copyright {{ helpers.currentYear() }} - Studio Boost Boost</p> #} 
+    <p class="footer__text">© Copyright 2023 - Studio Boost Boost</p>
+    </div>
+    <div class="column__column">
+      <p class="footer__text">Cookies </p>
+      <p class="footer__text">Policy</p>
+    </div>
+  </div>
+</footer>

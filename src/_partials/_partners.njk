@@ -1,0 +1,10 @@
+{% for partner in partners %}
+  <div class="col-md-4">
+    <div class="card">
+      <img src="{{ partner.image }}" alt="{{ partner.name }}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ partner.name }}</h5>
+      </div>
+    </div>
+  </div>
+{% endfor %}

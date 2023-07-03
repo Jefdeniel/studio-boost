@@ -1,0 +1,31 @@
+---
+title: Contact
+tags: nav_items
+---
+
+{% extends "../_layouts/extended-grid.njk" %}
+
+{% block left %}
+  <h1>Kom gerust langs of contacteer ons</h1>
+  <!-- geen BEM syntax: bootstrap class -->
+  <ul class="list-unstyled">
+    <li><p>info@studioboost.be</p></li>
+    <li><p>09 012 34 45</p></li>
+    <li><p>Oudburg 5, 9000 Gent</p></li>
+  </ul>
+{% endblock left %}
+
+{% block right %}
+<img src="/img/contact/gebouw.png"/>
+{% endblock right %}
+
+
+ {% block extended_left %}
+  <img src="/img/contact/office.png"/>
+{% endblock extended_left %}
+
+{% block extended_right %}
+  {% block text %}
+    <p>Naast het ontwerpen en ontwikkelen van websites, webshops en logo’s biedt Studio Boost ook andere diensten aan zoals zoekmachine-optimalisatie (SEO), webhosting en onderhoud. Ze begrijpen dat het hebben van een professionele online aanwezigheid van vitaal belang is voor bedrijven en bieden daarom complete oplossingen aan die zowel betaalbaar als effectief zijn. Of het nu gaat om een start-up of een gevestigd bedrijf, Studio Boost kan helpen bij het versterken van de online aanwezigheid en het vergroten van de zichtbaarheid op het internet. </p>
+  {% endblock text %}
+{% endblock extended_right %} 
